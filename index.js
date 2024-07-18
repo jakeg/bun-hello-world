@@ -8,7 +8,7 @@ const server = Bun.serve({
   fetch(request) {
     return new Response(`<!doctype html>
       <h1>Welcome to Bun, running on Heroku!</h1>
-      <p>You are visitor number ${ ++count } since the last Dyno restart ${ Math.round((Date.now() - start)/1000) }s ago.</p>
+      <p>${ ++count } hits since the last Dyno restart ${ Math.round((Date.now() - start)/1000) }s ago.</p>
     `, { headers: { "Content-Type": "text/html" } } );
   },
 });
